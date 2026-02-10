@@ -21,3 +21,15 @@ d = np.random.randn(3, 4)
 print(c)
 print(d)
 
+#-----------#
+
+X = np.random.randn(100, 1)   # 100 samples, 1 feature
+y = 3 * X + np.random.randn(100, 1) * 0.5
+
+#stats operations
+
+np.mean(X)
+np.std(X)
+np.sum(X)
+np.dot(X.T, X)
+
