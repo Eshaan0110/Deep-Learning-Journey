@@ -9,13 +9,17 @@ X= np.random.randn(100, 1)  # 100 samples, 1 feature
 noise = np.random.rand(100, 1) * 0.5
 y = 3 * X + noise
 
-#Normalize data
+#Normalize data - standardization (z-score normalization)-used to scale the features of the data to have a mean of 0 and a standard deviation of 1. This is important for many machine learning algorithms, including linear regression, as it helps to ensure that all features contribute equally to the model and prevents features with larger scales from dominating the learning process.
 
 X_mean = np.mean(X)
 X_std = np.std(X)
 X_normalized = (X - X_mean) / X_std
 
-#model parameters
+#model parameters 
+'''In linear regression, the model parameters typically include the weights (coefficients) and the bias (intercept). 
+    The weights determine the influence of each feature on the predicted output, 
+    while the bias allows the model to fit data that does not pass through the origin. 
+    In this case, since we have only one feature, we will have one weight and one bias.'''
 
 w = np.random.rand(1,1) # weight
 b= 0.0
@@ -26,7 +30,10 @@ def predict(X,w,b):
     return w*X + b
 
 #loss function
-
+'''Mean Squared Error (MSE) is a common loss function used in regression tasks.
+    It measures the average of the squares of the errors—that is, 
+    the average squared difference between the predicted values and the actual values.'''
+    
 def mse_loss(y_true, y_pred):
     return np.mean((y_true - y_pred) ** 2)
 
