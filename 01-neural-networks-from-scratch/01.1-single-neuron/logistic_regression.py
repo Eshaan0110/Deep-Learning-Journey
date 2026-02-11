@@ -43,3 +43,21 @@ def sigmoid(z):
 def predict(W,x,b):
     z = w*X + b
     return sigmoid(z)
+
+#loss function (BCE)
+
+def binary_cross_entropy(y_true,y_pred):
+    epsilon = 1e-9
+    y_pred = np.clip(y_pred, epsilon, 1 - epsilon)
+    return -np.mean(
+        y_true * np.log(y_pred) +
+        (1 - y_true) * np.log(1 - y_pred)
+    )
+
+#gradient descent
+
+def compute_gradients(X, y_true, y_pred):
+    n = len(X)
+    dw = (1/n)* np.sum((y_pred - y_true) * X)
+    db = (1/n)* np.sum(y_pred - y_true)
+    return dw, db
