@@ -93,3 +93,9 @@ plt.axvline(x=decision_boundary, color='red', label="Decision Boundary")
 
 plt.legend()
 plt.show()
+
+
+'''we use BCE and not MSE because BCE is more suitable for binary classification tasks.
+ MSE can lead to slower convergence and less stable training when used with sigmoid activation,
+ while BCE provides better gradients for learning.(it punishes wrong predictions more heavily and rewards correct predictions more effectively,
+ leading to faster convergence.)'''
