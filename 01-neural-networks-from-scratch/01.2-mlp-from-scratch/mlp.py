@@ -37,7 +37,7 @@ def forward_pass(X):
 #bce loss
 def binary_cross_entropy(y_true,y_pred):
     epsilon = 1e-9
-    A2 = np.clip(A2, epsilon, 1 - epsilon)
+    A2 = np.clip(a2, epsilon, 1 - epsilon)
 
     return -np.mean(
         y * np.log(A2) +
@@ -62,3 +62,26 @@ def backpropagation(X,y,z1,a1,z2,a2):
 
 
 
+#update parameters
+
+def update(dW1, db1, dW2, db2, lr=0.1):
+    global W1, b1, W2, b2
+
+    W1 -= lr * dW1
+    b1 -= lr * db1
+    W2 -= lr * dW2
+    b2 -= lr * db2
+
+#training loop
+
+epochs = 10000
+
+for epoch in range(epochs):
+    Z1, A1, Z2, A2 = forward_pass(X)
+    loss = binary_cross_entropy(y, A2)
+
+    dW1, db1, dW2, db2 = backpropagation(X, y, Z1, A1, Z2, A2)
+    update(dW1, db1, dW2, db2, lr=0.1)
+
+    if epoch % 1000 == 0:
+        print(f"Epoch {epoch}, Loss: {loss:.4f}")
