@@ -35,14 +35,15 @@ def forward_pass(X):
     return z1,a1,z2,a2
 
 #bce loss
-def binary_cross_entropy(y_true,y_pred):
+def binary_cross_entropy(y_true, y_pred):
     epsilon = 1e-9
-    A2 = np.clip(a2, epsilon, 1 - epsilon)
+    y_pred = np.clip(y_pred, epsilon, 1 - epsilon)
 
     return -np.mean(
-        y * np.log(A2) +
-        (1 - y) * np.log(1 - A2)
+        y_true * np.log(y_pred) +
+        (1 - y_true) * np.log(1 - y_pred)
     )
+
 
 #backpropagation
 
