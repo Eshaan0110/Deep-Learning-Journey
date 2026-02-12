@@ -82,7 +82,7 @@ for epoch in range(epochs):
     loss = binary_cross_entropy(y, A2)
 
     dW1, db1, dW2, db2 = backpropagation(X, y, Z1, A1, Z2, A2)
-    update(dW1, db1, dW2, db2, lr=0.1)
+    update(dW1, db1, dW2, db2, lr=0.05)
 
     if epoch % 1000 == 0:
         print(f"Epoch {epoch}, Loss: {loss:.4f}")
