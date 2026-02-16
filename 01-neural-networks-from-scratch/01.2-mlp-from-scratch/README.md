@@ -227,7 +227,7 @@ Deep learning is simply stacking transformations with non-linearities.
 
 ---
 
-# 10️⃣ Mental Model
+# 1️⃣0️⃣ Mental Model
 
 Forward pass:
 Make prediction.
