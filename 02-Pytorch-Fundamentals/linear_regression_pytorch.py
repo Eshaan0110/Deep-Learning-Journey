@@ -27,3 +27,25 @@ criterion = nn.MSELoss()
 
 optimizer = optim.SGD(model.parameters(), lr=0.01)
 
+#training loop
+
+epochs = 100
+losses = []
+
+for epoch in range ( epochs):
+
+    #computation of loss
+    y_pred = model(X)
+    loss = criterion(y_pred, y)
+    losses.append(loss.item())
+
+
+    #backward pass 
+
+    optimizer.zero_grad()
+    loss.backward()
+    #update parameters
+    optimizer.step()
+
+    if epoch % 10 == 0:
+        print(f"Epoch {epoch}, Loss: {loss.item()}")
