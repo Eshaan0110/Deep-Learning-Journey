@@ -19,3 +19,11 @@ This means that the layer will take a single input value and produce a single ou
 it replaces the need to manually define weights and biases, as it automatically initializes them for us. also the w = random 
 and b = 0.0 is replaced by the nn.Linear layer which initializes the weights and biases for us.'''
 
+#loss function
+
+criterion = nn.MSELoss()
+
+#optimizer
+
+optimizer = optim.SGD(model.parameters(), lr=0.01)
+
