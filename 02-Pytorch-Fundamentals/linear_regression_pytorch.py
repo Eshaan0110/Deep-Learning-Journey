@@ -22,6 +22,12 @@ and b = 0.0 is replaced by the nn.Linear layer which initializes the weights and
 #loss function
 
 criterion = nn.MSELoss()
+''' MSELoss = Mean Squared Error Formula:    
+ mean((y_pred - y_true)^2). This measures how wrong our predictions are. 
+ In the context of linear regression, it calculates the average of the squares of the differences between the predicted values (y_pred) and 
+ the actual target values (y_true). The goal of training is to minimize this loss, which means we want our predictions to be as close as possible
+to the true values.
+'''
 
 #optimizer
 
@@ -49,3 +55,14 @@ for epoch in range ( epochs):
 
     if epoch % 10 == 0:
         print(f"Epoch {epoch}, Loss: {loss.item()}")
+# ==============================
+# Visualization
+# ==============================
+
+with torch.no_grad():
+    predictions = model(X)
+
+plt.scatter(X.numpy(), y.numpy(), label="Data")
+plt.plot(X.numpy(), predictions.numpy(), color="red", label="Model")
+plt.legend()
+plt.show()
