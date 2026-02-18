@@ -33,6 +33,11 @@ to the true values.
 
 optimizer = optim.SGD(model.parameters(), lr=0.01)
 
+'''SGD = Stochastic Gradient Descent. It is an optimization algorithm used to update the parameters of a model during training. 
+The "stochastic" part means that it updates the parameters using a single sample (or a small batch) of data at a time, rather than the entire dataset. 
+This can lead to faster convergence in some cases, especially for large datasets. 
+The "gradient descent" part refers to the method of updating the parameters in the direction that reduces the loss.'''
+
 #training loop
 
 epochs = 100
