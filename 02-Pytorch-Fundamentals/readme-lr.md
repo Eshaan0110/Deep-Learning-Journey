@@ -226,7 +226,3 @@ If you understand:
 - backward()
 - zero_grad()
 - optimizer.step()
-
-You understand the foundation of PyTorch.
-
-Everything else in deep learning builds on this structure.
