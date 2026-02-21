@@ -31,7 +31,12 @@ x = torch.tensor([3.0])
 # print(x.requires_grad)
 # print(y.requires_grad)
 
-#inspect gradients
+#inspect gradients  
+
+#dissapearing gradient
+'''
+
+'''
 
 print("Initial values:")
 print("w:", w)
@@ -52,3 +57,7 @@ print("y.grad_fn:", y.grad_fn)
 print("\nAfter backward()")
 print("Gradient of w:", w.grad)
 print("Gradient of b:", b.grad)
+
+
+
+
