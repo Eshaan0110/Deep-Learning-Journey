@@ -33,9 +33,9 @@ x = torch.tensor([3.0])
 
 #inspect gradients  
 
-#dissapearing gradient
+#vanishing gradient
 '''
-
+vanishing gradients tend to 
 '''
 
 print("Initial values:")
