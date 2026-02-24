@@ -70,4 +70,3 @@ with torch.no_grad():
 plt.scatter(X.numpy(), y.numpy(), label="Data")
 plt.plot(X.numpy(), predictions.numpy(), color="red", label="Model")
 plt.legend()
-plt.show()

@@ -214,4 +214,3 @@ Think of PyTorch as:
 
 No magic.
 Just automated calculus.
-
