@@ -215,14 +215,3 @@ Think of PyTorch as:
 No magic.
 Just automated calculus.
 
----
-
-# Final Takeaway
-
-If you understand:
-
-- requires_grad
-- computation graph
-- backward()
-- zero_grad()
-- optimizer.step()

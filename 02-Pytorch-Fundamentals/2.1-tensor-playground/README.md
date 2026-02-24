@@ -202,6 +202,3 @@ Apply chain rule automatically.
 Update:
 Adjust parameters using gradients.
 
----
-
-This understanding removes the “magic” from PyTorch.
