@@ -57,6 +57,7 @@ print("y.grad_fn:", y.grad_fn)
 print("\nAfter backward()")
 print("Gradient of w:", w.grad)
 print("Gradient of b:", b.grad)
+print("")
 
 
 
