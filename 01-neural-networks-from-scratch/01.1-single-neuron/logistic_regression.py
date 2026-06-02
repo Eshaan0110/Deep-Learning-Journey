@@ -40,8 +40,8 @@ def sigmoid(z):
 
 #forward pass
 
-def predict(W,x,b):
-    z = w*X + b
+def predict(X, w, b):
+    z = w * X + b
     return sigmoid(z)
 
 #loss function (BCE)
