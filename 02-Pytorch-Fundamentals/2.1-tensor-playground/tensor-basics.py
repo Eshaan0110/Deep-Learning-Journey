@@ -54,6 +54,7 @@ print("\nAfter addition y = z + b:")
 print("y:", y)
 print("y.grad_fn:", y.grad_fn)
 
+y.backward()
 print("\nAfter backward()")
 print("Gradient of w:", w.grad)
 print("Gradient of b:", b.grad)
